@@ -43,4 +43,4 @@ class BuyAPIView(APIView):
             success_url='http://localhost:8000/success',
             cancel_url='http://localhost:8000/cancel',
         )
-        return Response({'session_id': session.id})
+        return Response({'session_id': session.id, 'STRIPE_PUBLISH_KEY': settings.STRIPE_PUBLISH_KEY})

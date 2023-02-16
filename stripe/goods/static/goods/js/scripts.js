@@ -1,10 +1,3 @@
-// "use strict";
-
-
-let buyButton = document.querySelector('.buy-button');
-let itemName = document.querySelector('.item-name > p');
-let itendescription = document.querySelector('.item-description > p');
-let itemPrice = document.querySelector('.item-price > p');
 let body = document.body;
 let itemsUrl = 'items/'
 
@@ -29,8 +22,6 @@ renderItems  = (data) => {
       detailButton.className = 'button';
       detailButton.innerText = 'Description';
       detailButton.addEventListener('click', getItem);
-      // itemDiv.id = item.id;
-      // itemDiv.addEventListener('click', getItem);
       itemDiv.append(nameDiv, priceDiv, detailButton);
       mainDiv.append(itemDiv);
    }
@@ -79,13 +70,6 @@ buyItem = (event) => {
 
 
 stripeRedirect = (data) => {
-   let stripe = Stripe('pk_test_51Manx5LWBBWkbr9D91C3yuCZTq5TYVdUxzGRyoOjILgaNsZqshHKEe3NPkowFvTG1uwmXsUrhs7B9c4rxpOYrQLa001gDSXZV5');
-   console.log(data.session_id);
-   console.log(stripe);
+   let stripe = Stripe(data.STRIPE_PUBLISH_KEY);
    stripe.redirectToCheckout({ sessionId: data.session_id });
 }
-
- getData = () => {
-    
-    let res = fetch(url)
- }
