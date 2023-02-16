@@ -1,0 +1,29 @@
+[
+  {
+    "model": "goods.item",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone",
+      "description": "Very cool phone",
+      "price": 1000
+    }
+  },
+  {
+    "model": "goods.item",
+    "pk": 2,
+    "fields": {
+      "name": "iPad",
+      "description": "Very cool tablet",
+      "price": 1200
+    }
+  },
+  {
+    "model": "goods.item",
+    "pk": 3,
+    "fields": {
+      "name": "MacBook",
+      "description": "Very cool laptop",
+      "price": 2000
+    }
+  }
+  ]
